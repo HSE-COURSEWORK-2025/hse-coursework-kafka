@@ -1,0 +1,15 @@
+envs:
+  config:
+    # Spring Boot: базовый путь всех REST-эндпоинтов
+    SERVER_SERVLET_CONTEXT_PATH: "/kafka-ui"
+yamlApplicationConfig:
+  kafka:
+    clusters:
+      - name: yaml
+        bootstrapServers:  my-cluster-kafka-bootstrap:9092
+  auth:
+    type: disabled
+  management:
+    health:
+      ldap:
+        enabled: false
