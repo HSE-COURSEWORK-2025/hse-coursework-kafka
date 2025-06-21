@@ -8,6 +8,16 @@ spec:
   replicas: 1
   roles:
     - controller
+  resources:
+    requests:
+      memory: "1Gi"
+      cpu: "500m"
+    limits:
+      memory: "1Gi"
+      cpu: "1"
+  jvmOptions:
+    -Xms: "1g"
+    -Xmx: "1g"
   storage:
     type: jbod
     volumes:
@@ -15,7 +25,6 @@ spec:
         type: ephemeral
         kraftMetadata: shared
 ---
-
 apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaNodePool
 metadata:
@@ -26,6 +35,16 @@ spec:
   replicas: 1
   roles:
     - broker
+  resources:
+    requests:
+      memory: "1Gi"
+      cpu: "500m"
+    limits:
+      memory: "1Gi"
+      cpu: "1"
+  jvmOptions:
+    -Xms: "1g"
+    -Xmx: "1g"
   storage:
     type: jbod
     volumes:
@@ -33,7 +52,6 @@ spec:
         type: ephemeral
         kraftMetadata: shared
 ---
-
 apiVersion: kafka.strimzi.io/v1beta2
 kind: Kafka
 metadata:
