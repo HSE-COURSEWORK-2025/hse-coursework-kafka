@@ -2,6 +2,8 @@
 
 Этот репозиторий содержит манифесты и скрипты для деплоя Apache Kafka и Kafka UI в Kubernetes-кластере.
 
+![](https://github.com/HSE-COURSEWORK-2025/hse-coursework-kafka/blob/master/kafka_demo.jpg)
+
 ## Структура
 - `values.strimzi.yml` — манифесты и роли для Strimzi Operator
 - `values.kafka.yml` — описание кластера Kafka и node pools
